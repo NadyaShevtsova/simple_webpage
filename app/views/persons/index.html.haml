@@ -1,0 +1,12 @@
+%h1
+  Persons
+%table
+  %thead
+    %tr
+      %th= 'ID'
+      %th= 'first_name'
+      %th= 'last_name'
+      %th= 'organization_id'
+      %th= 'assessement_count'
+  %tbody
+    = render partial: "person", collection: @persons
