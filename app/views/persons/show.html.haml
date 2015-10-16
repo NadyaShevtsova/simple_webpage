@@ -13,5 +13,10 @@
     %th= 'Location'
     %td= @person.organization.location
 
-%p= link_to 'Edit date', edit_person_path(@person), "data-toggle" => "modal", :class => 'btn btn-mini'
+= link_to 'Edit data', '#edit_person', 'data-toggle' => 'modal', :class => 'btn'
+-#%button.btn.btn-link{ type: 'button', 'data-toggle' => 'modal', 'data-target' => '#edit_person' } Edit data
+= render 'persons/edit_person'
+
+
+
 

@@ -1,0 +1,20 @@
+#edit_person.modal.fade{ role: 'dialog' }
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{ 'data-dissmis' => 'modal'} &times;
+        %h4.modal-title Edit Person
+      .modal-body
+        = form_for @person, html: { method: 'post', class: 'form-horizontal' } do |f|
+          .form-group
+            = f.label :first_name, 'First Name', class: 'control-label col-sm-3'
+            .col-sm-9
+              = f.text_field :first_name, value: @person.first_name, class: 'form-control'
+          .form-group
+            = f.label :last_name, 'Last Name', class: 'control-label col-sm-3'
+            .col-sm-9
+              = f.text_field :last_name, value: @person.last_name, class: 'form-control'
+          .form-group
+            .col-sm-offset-3.col-sm-9
+              %button.btn.btn-default{type: 'submit'} Update
+
