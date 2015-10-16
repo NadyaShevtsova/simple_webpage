@@ -1,6 +1,7 @@
 class PersonsController < ApplicationController
   def index
-    @persons = Person.all
+    @q = Person.search(params[:q])
+    @persons = @q.result(distinct: true)
   end
 
 private
