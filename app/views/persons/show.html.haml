@@ -1,0 +1,17 @@
+%h1 Personal details
+%table.table-bordered.table-condensed
+  %tr
+    %th= 'First Name'
+    %td= @person.first_name
+  %tr
+    %th= 'Last Name'
+    %td= @person.last_name
+  %tr
+    %th= 'Organization'
+    %td= @person.organization.title
+  %tr
+    %th= 'Location'
+    %td= @person.organization.location
+
+%p= link_to 'Edit date', edit_person_path(@person), "data-toggle" => "modal", :class => 'btn btn-mini'
+
