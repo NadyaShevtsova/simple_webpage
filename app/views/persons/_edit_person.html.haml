@@ -2,7 +2,7 @@
   .modal-dialog
     .modal-content
       .modal-header
-        %button.close{ 'data-dissmis' => 'modal'} &times;
+        %button.close{ 'data-dismiss' => 'modal'} &times;
         %h4.modal-title Edit Person
       .modal-body
         = form_for @person, html: { method: 'post', class: 'form-horizontal' } do |f|
