@@ -19,8 +19,9 @@
               window.location.reload()
             else
               $.each data, (key, value) ->
-                $('#person_' + key).closest('.form-group').addClass('error')
-                $('#person_' + key).after("<p class='small-red'>" + value + "</p>")
+                $('#person_' + key).closest('.form-group').addClass('error') unless $('.form-group#error').length
+                $('#person_' + key).after("<p class='small-red'></p>") unless $('#person_' + key).next('p.small-red').length
+                $('p.small-red').text(value)
 
             submit_button.text('Update').removeAttr('disabled')
 

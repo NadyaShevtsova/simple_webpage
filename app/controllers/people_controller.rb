@@ -1,7 +1,7 @@
-class PersonsController < ApplicationController
+class PeopleController < ApplicationController
   def index
     @q = Person.search(params[:q])
-    @persons = @q.result(distinct: true)
+    @people = @q.result(distinct: true)
   end
 
   def show
