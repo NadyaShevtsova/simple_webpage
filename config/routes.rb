@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :persons, only: [:index, :show, :edit, :update]
+  resources :persons, only: [:index, :show, :update]
   root 'persons#index'
 
   # The priority is based upon order of creation: first created -> highest priority.

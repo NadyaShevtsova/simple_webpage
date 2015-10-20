@@ -5,7 +5,7 @@
         %button.close{ 'data-dismiss' => 'modal'} &times;
         %h4.modal-title Edit Person
       .modal-body
-        = form_for @person, html: { method: 'post', class: 'form-horizontal' } do |f|
+        = form_for @person, html: { class: 'form-horizontal', id: 'edit_person_form' } do |f|
           .form-group
             = f.label :first_name, 'First Name', class: 'control-label col-sm-3'
             .col-sm-9
