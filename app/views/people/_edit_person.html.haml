@@ -15,6 +15,10 @@
             .col-sm-9
               = f.text_field :last_name, value: @person.last_name, class: 'form-control'
           .form-group
+            = f.label :organization_id, 'Organization', class: 'control-label col-sm-3'
+            .col-sm-9
+              = f.select :organization_id, Organization.all.map{|o| [o.title, o.id]}, {}, { class: 'form-control' }
+          .form-group
             .col-sm-offset-3.col-sm-9
               %button.btn.btn-default{type: 'submit'} Update
 
