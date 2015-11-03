@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'active_model_serializers'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'haml'

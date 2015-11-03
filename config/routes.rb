@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   resources :people, only: [:index, :show, :update]
+  namespace :api do
+    resources :temporary_people , only: [:index, :show, :update]
+  end
   root 'people#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
