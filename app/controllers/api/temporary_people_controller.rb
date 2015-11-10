@@ -1,5 +1,5 @@
 class Api::TemporaryPeopleController < ApplicationController
-  skip_before_filter :verify_authenticity_token, only: [:update]
+  skip_before_filter :verify_authenticity_token, if: :json_only
 
   def index
     q = Person.search(params[:q])
@@ -20,6 +20,11 @@ class Api::TemporaryPeopleController < ApplicationController
     else
       render json: { errors: person.errors.full_messages }
     end
+  end
+
+  protected
+  def json_only
+    request.format.json?
   end
 
   private

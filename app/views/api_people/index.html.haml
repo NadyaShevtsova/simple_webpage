@@ -1,0 +1,13 @@
+%h1
+  People from api
+%table.table.table-striped.table-bordered.table-hover
+  %thead
+    %tr
+      %th= 'ID'
+      %th= 'First Name'
+      %th= 'Last Name'
+      %th= 'Assessement Count'
+      %th= 'Ogranization Title'
+  %tbody
+    = render partial: "person", collection: @api_people
+
